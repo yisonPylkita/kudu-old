@@ -1,0 +1,33 @@
+<!-- 
+    CommandBar is a bar on the bottom of the screen. 
+    It contains action buttons from <F1> to <F2>  
+ -->
+<Module Name="CommandBar">
+
+<!-- Not used here for now
+<Require>
+    <Module Name="Window">
+</Require>
+
+<Variables>
+    <Variable Name="Height" Value="15" Visibility="Module"/>
+</Variables>
+-->
+
+<!-- Relay on default behaviour instead of setting it by hand 
+<GraphicalObject Name="CommandBar" PositionX="0" PositionY="#[$(Window::SizeY) - $(Height)]" SizeX="0" SizeY="$(Height)"> 
+-->
+<GraphicalObject Name="CommandBar" SizeY="15">
+    <GraphicalObject Name="ButtonF1" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF2" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF3" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF4" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF5" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF6" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF7" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF8" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF9" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF10" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF11" Float="Left" SizeX="120" />
+    <GraphicalObject Name="ButtonF12" Float="Left"/>  <!-- SizeX is everything what left -->
+</GraphicalObject>
