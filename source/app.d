@@ -1,19 +1,21 @@
 module kudu;
 import std.string:  toStringz;
 import core.stdc.locale;
-import deimos.ncurses.ncurses;
+import deimos.ncurses;
 
 void main()
 {
     setlocale(LC_CTYPE,"");
 
-    immutable hello = toStringz("日本語からの「Hello World!」");
+    initscr();
+    scope(exit) endwin();   /// for the love of all that is holy, alway exit cleanly.
+    raw();
+    keypad(stdscr, true);
+    noecho();
 
-    initscr();              //initialize the screen
-    scope(exit) endwin();   //for the love of all that is holy, alway exit cleanly.
+    immutable message = toStringz("Hello World!");
+    printw("%s", message);
 
-    printw(hello);          //prints the char[] hello to the screen
-    refresh();              //actually does the writing to the physical screen
-
-    getch();                //gets a single character from the screen.
+    refresh();  /// actually does the writing to the physical screen
+    getch();    /// gets a single character from the screen
 }
