@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+# DUB files
+.dub
+
+# Build files
+.build

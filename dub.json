@@ -1,0 +1,10 @@
+{
+    "name": "kudu",
+    "description": "Console file manager",
+    "authors": ["Wojciech Bartnik"],
+    "homepage": "http://github.com/yisonPylkita/kudu",
+    "license": "MIT",
+    "dependencies": {
+        "ncurses": "~master"
+    }
+}
